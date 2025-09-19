@@ -1,3 +1,4 @@
 #!/bin/bash
 
-echo "CM nmae is $CM"
+echo "AP CM name is $CM"
+echo "AP DCM name is $DCM"
