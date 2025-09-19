@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Arguments ,we are provide the deatils at runtime
+
 PERSON1=$1
 PERSON2=$2
 echo "$PERSON1:: How are you $PERSON2"
