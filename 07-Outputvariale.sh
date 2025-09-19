@@ -2,4 +2,4 @@
 
 DATE=$(date)
 
-echo "Script execution timestamp:$DATE
+echo "Script execution timestamp":$DATE
