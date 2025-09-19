@@ -4,6 +4,7 @@
 
 #PERSON1="Hari"
 #PERSON2="Babu"
+PERSON3="NARESH"
 
 PERSON1=Hari
 PERSON2=Babu
