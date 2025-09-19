@@ -7,5 +7,5 @@ echo "enter your location pin number and code"
 
 read -s PIN_NUMBER
 
-echo "your location pin number is :$PIN_NUMBER
+echo "my location pin number and code is :$PIN_NUMBER
 
