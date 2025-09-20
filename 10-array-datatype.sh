@@ -3,6 +3,6 @@
 # everything in shell is considerd as string
 LEADERS=("LOKESH" "CHANDRA" "PAVAN" "JAGAN")
 
-echo "first leaders is: ${LEADERS[0]}"
+echo "first leaders is: ${LEADERS[1]}"
 
 echo "All leaders names are:${LEADERS[@]}"
