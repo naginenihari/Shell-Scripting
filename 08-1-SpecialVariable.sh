@@ -6,6 +6,6 @@ echo "Present working directory: $PWD"
 echo "Current user name: $USER"
 echo "Current user home directory: $HOME"
 echo "PID of current script: $$"
-sleep 10 &
+sleep 50 &
 echo "PID of backend proccess: $!"
 echo "Exit status of the last executed command: $?"
