@@ -4,3 +4,5 @@
 LEADERS=("LOKESH" "CHANDRA" "PAVAN" "JAGAN")
 
 echo first leaders is: ${LEADERS[0]}
+
+echo all leaders names are $(LEADERS[@])
