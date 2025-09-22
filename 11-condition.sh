@@ -9,7 +9,7 @@ NUMBER=$1
 
 if 
 
-[ $NUMBER -lt 10]
+[ $NUMBER -lt 10];
 
 echo "given number $NUMBER is less then 10"
 
