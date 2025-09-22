@@ -1,8 +1,7 @@
 #!/bin/bash
 
-echo "Enter a number: "
-read -p $NUMBER
-if [ "$NUMBER" -le 1 ]; then
+read -p "Enter a number: " num
+if [ "$num" -le 1 ]; then
   echo "$NUMBER is not a prime number"
   exit 0
 fi
