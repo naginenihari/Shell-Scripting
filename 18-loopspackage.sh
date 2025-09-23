@@ -24,7 +24,7 @@ if [ $1 -ne 0 ]; then
 else 
     echo -e "installation of $2 is $G SUCCESS $N" |tee -a $LOG_FILE
 fi
-
+}
 for package in $?
 do
     echo "package is :$package"
