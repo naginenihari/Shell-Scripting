@@ -27,5 +27,9 @@ fi
 }
 for package in $@
 do
-    echo "package is :$package"
+if [ @? -ne 0 ]; then
+    dnf install $package -y &>>F$LOG_FILE
+else
+    echo -e " $package already installed--$Y SKIPPING $N"
+fi
 done
