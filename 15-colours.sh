@@ -13,18 +13,34 @@ fi
 
 VALIDATE() {
 if [ $1 -ne 0 ]; then
-    echo "ERROR:: installation of $2 is failure"
+    echo -e "installation of $2 is $R FAILURE $N"
     exit 1
 else 
-    echo "installation of $2 is SUCCESS"
+    echo -e "installation of $2 is $G SUCCESS $N"
 fi
  }
+ dnf list installed mysql 
+#Install if it is not found 
+ if [ $? -ne 0 ]; then
+    dnf install mysql -y
 
-dnf install mysql -y
-VALIDATE $? "MYSQL"
-   
-dnf install nginx -y
-VALIDATE $? "NGINX"
+    VALIDATE $? "MYSQL"
+ else
+    echo -e MYSQL already exist $Y SKIPPING $N
+ fi
 
-dnf install python3 -y
-VALIDATE $? "PYTHON"
+ dnf list installed nginx
+ if [ $? -ne 0 ]; then 
+    dnf install nginx -y
+    VALIDATE $? "NGINX"
+else
+    echo -e NGINX already exist $Y SKIPPING $N
+ fi
+
+ dnf list installed python3
+ if [ $? -ne 0 ]; then 
+    dnf install python3 -y
+    VALIDATE $? "PYTHON"
+ else
+    echo -e PYTHON already exist $Y SKIPPING $N
+ fi
