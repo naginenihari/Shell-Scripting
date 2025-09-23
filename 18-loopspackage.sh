@@ -25,7 +25,7 @@ else
     echo -e "installation of $2 is $G SUCCESS $N" |tee -a $LOG_FILE
 fi
 }
-for package in $?
+for package in $@
 do
     echo "package is :$package"
 done
