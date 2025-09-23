@@ -16,7 +16,6 @@ if [ $USERID -ne 0 ]; then
     echo "ERROR:: please run the script with root privelege" |tee -a $LOG_FILE
     exit 1  #failure mean other then Zero
 fi
-
 VALIDATE() {
 if [ $1 -ne 0 ]; then
     echo -e "installation of $2 is $R FAILURE $N" |tee -a $LOG_FILE
@@ -27,9 +26,9 @@ fi
 }
 for package in $@
 do
-if [ @? -ne 0 ]; then
-    dnf install $package -y &>>F$LOG_FILE
-else
-    echo -e " $package already installed--$Y SKIPPING $N"
-fi
+    if [ @? -ne 0 ]; then
+        dnf install $package -y &>>F$LOG_FILE
+    else
+        echo -e " $package already installed--$Y SKIPPING $N"
+    fi
 done
