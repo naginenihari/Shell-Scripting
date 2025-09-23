@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 USERID=$(id -u)
 R="\e[31m"
@@ -29,9 +29,9 @@ fi
 
 for package in $@
 do
-    dnf list installed $package &>>F$LOG_FILE
+    dnf list installed $package &>>$LOG_FILE
  if [ @? -ne 0 ]; then
-    dnf install $package -y &>>F$LOG_FILE
+    dnf install $package -y &>>$LOG_FILE
     VALIDATE $? "$package"    
  else
   echo -e " $package already installed--$Y SKIPPING $N"
