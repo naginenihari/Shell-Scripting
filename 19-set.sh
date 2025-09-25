@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e 
+set -euo pipefail
 
 # error(){
 #     echo "There is an error in $LINENO, Command is: $BASH_COMMAND"
