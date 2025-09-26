@@ -15,7 +15,7 @@ echo "Script started executed at:$(date)" |tee -a $LOG_FILE
 
 SOURCE_DIR=/home/ec2-user/app_logs
 
-if [ ! -d '$SOURCE_DIR' ]; then
+if [ ! -d $SOURCE_DIR ]; then
 echo -e "Error :: $SOURCE_DIR does not exist"
 exit 1
 fi
