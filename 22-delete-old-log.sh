@@ -13,8 +13,9 @@ LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 mkdir -p $LOGS_FOLDER
 echo "Script started executed at:$(date)" |tee -a $LOG_FILE
 
-SOURCE_DIR=/home/ec2-user/app_logsm
+SOURCE_DIR=/home/ec2-user/app_logs
 #Checking the source directory exist or not
+
 if [ ! -d $SOURCE_DIR ]; then
 echo -e "Error :: $SOURCE_DIR does not exist"
 exit 1
