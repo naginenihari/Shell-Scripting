@@ -1,6 +1,7 @@
 #!/bin/bash
+## Source will access both scripts
 NAME=INDIA
 echo "my country is: $NAME"
 echo "PID of the script-1: $$"
 
-sh 21-script-2.sh
+source 21.1-script-2.sh
