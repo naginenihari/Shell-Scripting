@@ -26,5 +26,5 @@ while IFS= read -s filepath
 do
  echo "deleting the file $filepath"
  rm -rf $filepath
- echo "deleting the file in $filepath
+ echo "deleted the file in $filepath"
 done <<< $FILES_TO_DELETE
