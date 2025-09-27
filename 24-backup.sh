@@ -40,5 +40,3 @@ echo "$R destination $DEST_DIR is not exist $N"
 exit 1
 fi
 
-#SOURCE_DIR=$1
-#DEST_DIR=$2
