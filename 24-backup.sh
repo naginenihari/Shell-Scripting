@@ -22,7 +22,7 @@ exit 1
 fi
 
 USAGE(){
-    echo -e "$R USAGE:: sudo sh 24-backup.sh <SOURCE_DIR> <DEST_DIR> <NO_DAYS> $N"
+    echo -e "$R USAGE:: sudo sh 24-backup.sh $SOURCE_DIR $DEST_DIR <NO_DAYS> $N"
     exit 1
 }
 
