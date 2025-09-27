@@ -70,6 +70,6 @@ ZIP_FILE_NAME="$DEST_DIR/app-logs-$TIMESTAMP.zip"
         echo -e "Archieval ... $R FAILURE $N"
         exit 1
     fi
-else
+ else
     echo -e "No files to archeive ... $Y SKIPPING $N"
 fi
