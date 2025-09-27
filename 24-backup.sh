@@ -25,7 +25,7 @@ USAGE(){
     echo "USAGE:: sh 24-backup.sh <SOURCE_DIR> <DEST_DIR> <NO_DAYS>"
     exit 1
 }
-if [ $# -le 2]; then
+if [ $# -le 2 ]; then
 USAGE
 fi
 
