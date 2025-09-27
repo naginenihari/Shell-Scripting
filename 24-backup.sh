@@ -16,18 +16,19 @@ mkdir -p $LOGS_FOLDER
 echo "Script started executed at:$(date)" |tee -a $LOG_FILE
 
 #Checking user is root user or not
+
 if [ $USERID -ne 0 ]; then
 echo "ERROR :: please run this scripts with root privelege"
 exit 1
 fi
 
 USAGE(){
-    echo -e "$R USAGE:: sudo sh 24-backup.sh $SOURCE_DIR $DEST_DIR <NO_DAYS> $N"
+    echo -e "$R USAGE:: sudo sh 24-backup.sh <SOURCE_DIR> <DEST_DIR> <NO_DAYS> $N"
     exit 1
 }
 
 if [ $# -lt 2 ]; then
-USAGE
+ USAGE 
 fi
 
 if [ ! -d $SOURCE_DIR ]; then
