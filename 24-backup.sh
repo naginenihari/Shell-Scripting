@@ -22,7 +22,7 @@ exit 1
 fi
 
 USAGE(){
-    echo -e "$R USAGE:: sh 24-backup.sh <SOURCE_DIR> <DEST_DIR> <NO_DAYS> $N"
+    echo -e "$R USAGE:: sudo sh 24-backup.sh <SOURCE_DIR> <DEST_DIR> <NO_DAYS> $N"
     exit 1
 }
 
@@ -31,12 +31,12 @@ USAGE
 fi
 
 if [ ! -d $SOURCE_DIR ]; then
-echo -e "$R $SOURCE_DIR is not exist $N"
+echo -e "$R source $SOURCE_DIR is not exist $N"
 exit 1
 fi
 
 if [ ! -d $DEST_DIR ]; then
-echo "$R $DEST_DIR is not exist $N"
+echo "$R destination $DEST_DIR is not exist $N"
 exit 1
 fi
 
