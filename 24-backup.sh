@@ -18,8 +18,8 @@ echo "Script started executed at:$(date)" |tee -a $LOG_FILE
 #Checking user is root user or not
 
 if [ $USERID -ne 0 ]; then
-echo "ERROR :: please run this scripts with root privelege"
-exit 1
+    echo "ERROR :: please run this scripts with root privelege"
+    exit 1
 fi
 
 USAGE(){
@@ -28,16 +28,16 @@ USAGE(){
 }
 
 if [ $# -lt 2 ]; then
- USAGE 
+    USAGE 
 fi
 
 if [ ! -d $SOURCE_DIR ]; then
-echo -e "$R source $SOURCE_DIR is not exist $N"
-exit 1
+    echo -e "$R source $SOURCE_DIR is not exist $N"
+    exit 1
 fi
 
 if [ ! -d $DEST_DIR ]; then
-echo "$R destination $DEST_DIR is not exist $N"
-exit 1
+    echo "$R destination $DEST_DIR is not exist $N"
+    exit 1
 fi
 
