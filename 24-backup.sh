@@ -56,8 +56,7 @@ ZIP_FILE_NAME="$DEST_DIR/app-logs-$TIMESTAMP.zip"
  echo "$FILES" |zip -@ -j "$ZIP_FILE_NAME"
 
  ### Check Archieval Success or not ###
-    if [ -f $ZIP_FILE_NAME ]
-    then
+    if [ -f $ZIP_FILE_NAME ]; then
         echo -e "Archeival ... $G SUCCESS $N"
 
         ### Delete if success ###
