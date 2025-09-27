@@ -22,7 +22,7 @@ exit 1
 fi
 
 USAGE(){
-    echo "USAGE:: sh 24-backup.sh <SOURCE_DIR> <DEST_DIR> <NO_DAYS>"
+    echo -e "$R USAGE:: sh 24-backup.sh <SOURCE_DIR> <DEST_DIR> <NO_DAYS> $N"
     exit 1
 }
 if [ $# -le 2 ]; then
