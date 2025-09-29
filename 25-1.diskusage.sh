@@ -6,12 +6,12 @@ MESSAGE=""
 
 
 while IFS= read -r lines
- do
+do
  USAGE=$(echo $lines |awk '{print $6}'| cut -d '%' -f1)
  PARTITION=$(echo $lines |awk '{print $7}')
 
 if [ $USAGE -ge $DISK_THRESHOLD ]; then
         MESSAGE+="High Disk usage on $PARTITION: $USAGE % <br>" # escaping
-    fi
+fi
 
- done <<< $DISK_USAGE
+done <<< $DISK_USAGE
