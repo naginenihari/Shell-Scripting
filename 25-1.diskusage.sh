@@ -11,12 +11,12 @@ while IFS= read -r lines
  PARTITION=$(echo $lines |awk '{print $7}')
 
     if [ $USAGE -ge $DISK_THRESHOLD ]; then
-        MESSAGE+="High Disk usage on $PARTITION: $USAGE %" # escaping
+        MESSAGE+="High Disk usage on $PARTITION: $USAGE % \n" # escaping
     fi
 
  done <<< $DISK_USAGE
  
- echo "message body:$MESSAGE"
+ echo -e "message body:$MESSAGE"
  
 sh mail.sh "info@joindevops.com" "High Disk Usage Alert" "High Disk Usage" "$MESSAGE" "$IP_ADDRESS" "DevOps Team"
 
